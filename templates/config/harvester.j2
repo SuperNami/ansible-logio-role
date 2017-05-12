@@ -1,0 +1,80 @@
+exports.config = {
+
+  server: {
+    host: '{{ logio_host }}',
+    port: {{ harvester_port }}
+  },
+
+  nodeName: "appserver",
+  logStreams: {
+    "apt": [
+      "/var/log/apt/history.log",
+      "/var/log/apt/term.log"
+    ],
+    "auth": [
+      "/var/log/auth.log"
+    ],
+    "dpkg": [
+      "/var/log/dpkg.log"
+    ],
+    "syslog": [
+      "/var/log/syslog"
+    ],
+    "syslog": [
+      "/var/log/syslog"
+    ],
+    "faillog": [
+      "/var/log/faillog"
+    ],
+    "bootlog": [
+      "/var/log/boot.log"
+    ],
+    "bootstraplog": [
+      "/var/log/bootstrap.log"
+    ],
+    "alternatives": [
+      "/var/log/alternatives.log"
+    ],
+    "maillog": [
+      "/var/log/mail.log"
+    ],
+    "kernlog": [
+      "/var/log/kern.log"
+    ],
+    "fail2ban": [
+      "/var/log/fail2ban.log"
+    ],
+    "auditlog": [
+      "/var/log/audit/audit.log"
+    ],
+    "chronymeasurements": [
+      "/var/log/chrony/measurements.log"
+    ],
+    "chronystatistics": [
+      "/var/log/chrony/statistics.log"
+    ],
+    "chronytracking": [
+      "/var/log/chrony/tracking.log"
+    ],
+    "lynis": [
+      "/var/log/lynis.log"
+    ],
+    "nginx": [
+      "{{ main_nginx_error_log }}",
+      "{{ website_nginx_error_log }}",
+      "{{ website_nginx_access_log }}"
+    ],
+    "hhvm": [
+      "{{ hhvm_error_log }}"
+    ],
+    "php-fpm": [
+      "{{ php_fpm_error_log }}",
+      "{{ opcache_access_log }}",
+      "{{ opcache_error_log }}"
+    ],
+    "mysql": [
+      "{{ mysql_error_log }}",
+      "{{ mysql_slow_query_log }}"
+    ]
+  }
+}

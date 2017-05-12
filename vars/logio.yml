@@ -1,0 +1,14 @@
+---
+# User
+logio_user: root
+
+# Networking
+logio_host: 0.0.0.0
+harvester_port: 28777
+logserver_port: 28777
+webserver_port: 28778
+
+# Config
+config_log_server_file: /{{ logio_user }}/.log.io/log_server.conf
+config_web_server_file: /{{ logio_user }}/.log.io/web_server.conf
+config_harvester_file: /{{ logio_user }}/.log.io/harvester.conf

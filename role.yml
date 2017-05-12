@@ -1,0 +1,10 @@
+---
+- name: logio
+  hosts: all
+  user: root
+  become: true
+  roles:
+  - logio
+  vars_files:
+  - vars/local.yml
+  - vars/logio.yml

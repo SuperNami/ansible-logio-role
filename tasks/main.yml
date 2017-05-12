@@ -1,0 +1,9 @@
+---
+- include: install.yml
+  tags: logio_install
+
+- include: configure.yml
+  tags: logio_configure
+
+- include: services.yml
+  tags: logio_services

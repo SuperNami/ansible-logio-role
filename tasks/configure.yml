@@ -1,0 +1,18 @@
+---
+- name: config > log server template
+  template: src=config/log-server.j2
+            dest={{ config_log_server_file }}
+  notify:
+    - log.io-server restart
+
+- name: config > web server template
+  template: src=config/web-server.j2
+            dest={{ config_web_server_file }}
+  notify:
+    - log.io-server restart
+
+- name: config > harvester template
+  template: src=config/harvester.j2
+            dest={{ config_harvester_file }}
+  notify:
+    - log.io-harvester restart
